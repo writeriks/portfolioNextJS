@@ -1,0 +1,4 @@
+implement redux
+add redux to navbar for hamburger menu
+uncomment navbar helper
+add rest of the components
