@@ -13,4 +13,13 @@ a {
 
 * {
   box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'RetGanon', sans-serif;
+  margin: 0;
 }
+
+ @font-face {
+  font-family: "RetGanon";
+  src: local("RetGanon"),
+   url("../fonts/retganon/retganon.ttf") format("truetype");
+  }

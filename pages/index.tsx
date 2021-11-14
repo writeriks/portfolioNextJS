@@ -1,18 +1,23 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import NavBar from '../components/navBar/nav-bar'
-
+import PortfolioMain from '../components/portfolio-main/portfolio-main'
 
 const Home: NextPage = () => {
   return (
-    <div >
+    <div>
       <Head>
         <title>Emir Haktan Öztürk</title>
         <meta name="description" content="Portfolio Emir Haktan Öztürk" />
+        <link
+          href="/fonts/retganon/retganon.ttf"
+          rel="preload"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
 
-      <main >
-        <NavBar />
+      <main>
+        <PortfolioMain />
       </main>
     </div>
   )

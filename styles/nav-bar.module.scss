@@ -47,9 +47,9 @@
         text-decoration: none;
         color: inherit;
 
-        /* span{
+        span{
           font-family: $font-family-ret-ganon;
-        } */
+        }
       }
 
       .itemContainer{
@@ -65,7 +65,7 @@
       }
 
       @media (max-width: $tablet-view-small) {
-        .item-container{
+        .itemContainer{
           display: none;
         }
       }
@@ -97,14 +97,14 @@
     color: $color-main;
 
     .left{
-      .item-container{
+      .itemContainer{
         .icon{
           color: $color-main;
         }
       }
     }
 
-    .hamburger-menu{
+    .hamburgerMenu{
       span{
         &:first-child{
           background-color: $color-main;
