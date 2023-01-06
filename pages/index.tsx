@@ -8,12 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Emir Haktan Öztürk</title>
         <meta name="description" content="Portfolio Emir Haktan Öztürk" />
-        <link
-          href="/fonts/retganon/retganon.ttf"
-          rel="preload"
-          as="font"
-          crossOrigin=""
-        />
+        <link href="/fonts/retganon/retganon.ttf" rel="preload" as="font" crossOrigin="" />
       </Head>
 
       <main>
