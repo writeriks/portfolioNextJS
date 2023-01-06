@@ -1,15 +1,17 @@
 import Head from 'next/head'
-import PortfolioMain from '../components/portfolio-main/portfolio-main'
-
 import { parse } from 'next-useragent'
 
+import PortfolioMain from '../components/portfolio-main/portfolio-main'
+
+import { useDispatch } from 'react-redux'
+import { setIsMobile } from '../store/reducers/context-reducer/context-slice'
+
 const Home: React.FC<any> = ({ userAgentString }): React.ReactElement => {
+  const dispatch = useDispatch()
   if (userAgentString) {
-    // Dispatch for mobile
-    console.log('Is Mobile', parse(userAgentString).isMobile)
+    dispatch(setIsMobile(parse(userAgentString).isMobile))
   } else {
-    // Dispatch for mobile
-    console.log('Is Mobile', parse(userAgentString).isMobile)
+    dispatch(setIsMobile(parse(window.navigator.userAgent).isMobile))
   }
 
   return (
