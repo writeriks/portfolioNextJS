@@ -1,27 +1,26 @@
 @import './variables.module.scss';
 
-
-.introComponent{
+.introComponent {
   background-color: $color-main;
 }
 
-.portfolioComponent{
+.portfolioComponent {
   background-color: #2f2824;
 }
 
-.worksComponent{
+.worksComponent {
   background-color: #172b26;
 }
 
-.testimonialsComponent{
+.testimonialsComponent {
   background-color: #1e1f16;
 }
 
-.contactComponent{
+.contactComponent {
   background-color: #352828;
 }
 
-.navBar{
+.navBar {
   background-color: $color-main;
   width: 100%;
   height: 70px;
@@ -31,31 +30,31 @@
   z-index: 3;
   transition: all 1s ease;
 
-  .wrapper{
+  .wrapper {
     padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .left{
+    .left {
       display: flex;
       align-items: center;
 
-      .logo{
+      .logo {
         font-size: 40px;
         font-weight: 700;
         text-decoration: none;
         color: inherit;
 
-        span{
+        span {
           font-family: $font-family-ret-ganon;
         }
       }
 
-      .itemContainer{
+      .itemContainer {
         margin-left: 30px;
 
-        .icon{
+        .navigationBarLeftIcon {
           display: flex;
           font-size: 22px;
           text-decoration: none;
@@ -65,15 +64,14 @@
       }
 
       @media (max-width: $tablet-view-small) {
-        .itemContainer{
+        .itemContainer {
           display: none;
         }
       }
     }
 
-    .right{
-
-      .hamburgerMenu{
+    .right {
+      .hamburgerMenu {
         width: 32px;
         height: 25px;
         display: flex;
@@ -81,7 +79,7 @@
         justify-content: space-between;
         cursor: pointer;
 
-        span{
+        span {
           width: 100%;
           height: 3px;
           background-color: white;
@@ -92,28 +90,28 @@
     }
   }
 
-  &.active{
+  &.active {
     background-color: white;
     color: $color-main;
 
-    .left{
-      .itemContainer{
-        .icon{
+    .left {
+      .itemContainer {
+        .icon {
           color: $color-main;
         }
       }
     }
 
-    .hamburgerMenu{
-      span{
-        &:first-child{
+    .hamburgerMenu {
+      span {
+        &:first-child {
           background-color: $color-main;
           transform: rotate(45deg);
         }
-        &:nth-child(2){
+        &:nth-child(2) {
           opacity: 0;
         }
-        &:last-child{
+        &:last-child {
           background-color: $color-main;
           transform: rotate(-45deg);
         }

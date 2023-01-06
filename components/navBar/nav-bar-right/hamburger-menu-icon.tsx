@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/nav-bar.module.scss'
+import styles from '../../../styles/nav-bar.module.scss'
 
 const HamburgerMenuIcon = () => {
   /* const isHamburgerMenuOpen = useSelector(displayReducerSelector.getIsHamburgerMenuOpen) */
