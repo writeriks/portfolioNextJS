@@ -10,6 +10,8 @@ class UiReducerSelector {
   getModal = createSelector(this.getUiReducer, (ui) => ui.modal)
 
   getViewportComponent = createSelector(this.getUiReducer, (ui) => ui.viewportComponent)
+
+  getIsHamburgerMenuOpen = createSelector(this.getUiReducer, (ui) => ui.isHamburgerMenuOpen)
 }
 
 const uiReducerSelector = new UiReducerSelector()
