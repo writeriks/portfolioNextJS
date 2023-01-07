@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { MutableRefObject } from 'react'
 import Robot from './robot'
 import IntroName from './intro-name'
 import styles from '../../styles/intro.module.scss'
 
-const Intro = (/* props: any */) => {
+interface IntroProps {
+  introRef: MutableRefObject<any>
+}
+
+const Intro: React.FC<IntroProps> = ({ introRef }) => {
   /*   const myRef: any = useRef()
   const {
     inViewport
@@ -21,7 +25,7 @@ const Intro = (/* props: any */) => {
   }, [inViewport]) */
 
   return (
-    <div className={styles.intro} id="intro" /* ref={myRef} */>
+    <div className={styles.intro} id="intro" ref={introRef}>
       <IntroName />
       <Robot />
     </div>
