@@ -1,0 +1,13 @@
+@use './_variables.module.scss';
+
+.intro {
+  background: linear-gradient(to bottom, #15023a, #2f2824);
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: variables.$tablet-view-small) {
+  .intro {
+    flex-direction: column;
+  }
+}
