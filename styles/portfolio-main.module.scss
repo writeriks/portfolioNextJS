@@ -1,9 +1,9 @@
 @import './variables.module';
 
-.container{
+.container {
   height: 100vh;
 
-  .sections{
+  .sections {
     width: 100%;
     height: calc(100vh - #{$nav-bar-height});
     position: relative;
@@ -11,15 +11,15 @@
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       display: none;
     }
 
-      > * {
-        width: 100vw;
-        height: calc(100vh - #{$nav-bar-height});
-        scroll-snap-align: start;
-        overflow: hidden;
+    > * {
+      width: 100vw;
+      height: calc(100vh - #{$nav-bar-height});
+      scroll-snap-align: start;
+      overflow: hidden;
     }
   }
 }
