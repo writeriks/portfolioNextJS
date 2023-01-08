@@ -8,6 +8,7 @@ import Intro from '../intro/intro'
 import useSetViewportComponent from '../../hooks/use-set-viewport-component'
 
 import styles from '../../styles/portfolio-main.module.scss'
+import SideBarMenu from '../side-bar-menu/side-bar-menu'
 
 const NAV_BAR_HEIGHT = '-101px'
 const PortfolioMain: NextComponentType = () => {
@@ -19,7 +20,7 @@ const PortfolioMain: NextComponentType = () => {
   return (
     <div className={styles.container}>
       <NavBar />
-      {/* <SideBarMenu /> */}
+      <SideBarMenu />
       <div className={styles.sections}>
         <Intro introRef={introRef} />
         <Portfolio portfolioRef={portfolioRef} />
