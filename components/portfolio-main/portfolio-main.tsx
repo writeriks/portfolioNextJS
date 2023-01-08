@@ -1,14 +1,19 @@
 import type { NextComponentType } from 'next'
-import NavBar from '../navBar/nav-bar'
-import styles from '../../styles/portfolio-main.module.scss'
 import { MutableRefObject, useRef } from 'react'
+
+import NavBar from '../navBar/nav-bar'
+import Portfolio from '../portfolio/portfolio'
 import Intro from '../intro/intro'
+
 import useSetViewportComponent from '../../hooks/use-set-viewport-component'
+
+import styles from '../../styles/portfolio-main.module.scss'
 
 const PortfolioMain: NextComponentType = () => {
   const introRef = useRef<MutableRefObject<HTMLDivElement>>()
+  const portfolioRef = useRef<MutableRefObject<HTMLDivElement>>()
 
-  useSetViewportComponent([introRef], '-100px')
+  useSetViewportComponent([introRef, portfolioRef], '-100px')
 
   return (
     <div className={styles.container}>
@@ -16,8 +21,8 @@ const PortfolioMain: NextComponentType = () => {
       {/* <SideBarMenu /> */}
       <div className={styles.sections}>
         <Intro introRef={introRef} />
+        <Portfolio portfolioRef={portfolioRef} />
 
-        {/*   <Portfolio /> */}
         {/*   <Works />
         <Testimonials />
         <Contact /> */}

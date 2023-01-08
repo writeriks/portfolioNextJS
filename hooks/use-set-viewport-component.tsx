@@ -1,12 +1,14 @@
 import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { setViewportComponent, ViewportComponents } from '../store/reducers/ui-reducer/ui-slice'
 
 const useSetViewportComponent = (elements: any[], rootMargin: string) => {
+  const dispatch = useDispatch()
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // TODO: Get viewport component and dispatch it
-          console.log('🚀 ~ file: use-intersection.tsx:22 ~ useEffect ~ entry', entry.target.id)
+          dispatch(setViewportComponent(entry.target.id.toUpperCase() as ViewportComponents))
         }
       },
       { rootMargin }
@@ -20,6 +22,6 @@ const useSetViewportComponent = (elements: any[], rootMargin: string) => {
     elements.forEach((element) => {
       return () => observer.unobserve(element.current)
     })
-  }, [elements, rootMargin])
+  }, [elements, rootMargin, dispatch])
 }
 export default useSetViewportComponent

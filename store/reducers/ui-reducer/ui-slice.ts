@@ -17,12 +17,14 @@ export interface UIState {
   modal: Modal | null
   viewportComponent: ViewportComponents
   isHamburgerMenuOpen: boolean
+  isTechListShown: boolean
 }
 
 export const initialState: UIState = {
   isLoading: false,
   modal: null,
   isHamburgerMenuOpen: false,
+  isTechListShown: false,
   viewportComponent: ViewportComponents.INTRO,
 }
 
@@ -46,12 +48,16 @@ const uiSlice = createSlice({
       state.modal = null
     },
 
+    setIsTechListShown: (state, action: PayloadAction<boolean>) => {
+      state.isTechListShown = action.payload
+    },
+
     toggleHamburgerMenu: (state) => {
       state.isHamburgerMenuOpen = !state.isHamburgerMenuOpen
     },
   },
 })
 
-export const { setIsLoading, openLoginModal, closeModal, setViewportComponent, toggleHamburgerMenu } = uiSlice.actions
+export const { setIsLoading, openLoginModal, closeModal, setIsTechListShown, setViewportComponent, toggleHamburgerMenu } = uiSlice.actions
 
 export default uiSlice.reducer

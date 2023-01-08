@@ -7,6 +7,8 @@ class UiReducerSelector {
 
   getIsLoading = createSelector(this.getUiReducer, (ui) => ui.isLoading)
 
+  getIsTechListShown = createSelector(this.getUiReducer, (ui) => ui.isTechListShown)
+
   getModal = createSelector(this.getUiReducer, (ui) => ui.modal)
 
   getViewportComponent = createSelector(this.getUiReducer, (ui) => ui.viewportComponent)

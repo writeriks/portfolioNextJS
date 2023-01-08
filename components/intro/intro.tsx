@@ -8,22 +8,6 @@ interface IntroProps {
 }
 
 const Intro: React.FC<IntroProps> = ({ introRef }) => {
-  /*   const myRef: any = useRef()
-  const {
-    inViewport
-  } = useInViewport(
-    myRef,
-    { rootMargin: '-100.0px' },
-    { disconnectOnLeave: false },
-    props
-  ) */
-
-  /*   useEffect(() => {
-    if (inViewport) {
-      store.dispatch(displayReducerActionCreator.setComponentInViewPort(ComponentsInViewport.INTRO))
-    }
-  }, [inViewport]) */
-
   return (
     <div className={styles.intro} id="intro" ref={introRef}>
       <IntroName />
