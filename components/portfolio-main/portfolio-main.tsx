@@ -9,7 +9,7 @@ import useSetViewportComponent from '../../hooks/use-set-viewport-component'
 
 import styles from '../../styles/portfolio-main.module.scss'
 
-const NAV_BAR_HEIGHT = '101px'
+const NAV_BAR_HEIGHT = '-101px'
 const PortfolioMain: NextComponentType = () => {
   const introRef = useRef<MutableRefObject<HTMLDivElement>>()
   const portfolioRef = useRef<MutableRefObject<HTMLDivElement>>()
