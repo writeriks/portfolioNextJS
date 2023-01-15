@@ -16,6 +16,9 @@ const HelperTechs = () => {
         <li>
           <span className={styles.tech}>T y p e S c r i p t</span>
         </li>
+        <li>
+          <span className={styles.tech}>R e s t</span>
+        </li>
       </ul>
     </div>
   )
