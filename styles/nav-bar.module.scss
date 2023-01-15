@@ -64,7 +64,7 @@
         }
       }
 
-      @media (max-width: variables.$tablet-view-small) {
+      @media (max-width: variables.$tablet-view-medium) {
         .itemContainer {
           display: none;
         }

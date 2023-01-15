@@ -12,7 +12,7 @@ const NavBarLeft = () => {
     <div className={styles.left}>
       <a href="#intro" className={styles.logo}>
         <ArrowBackIosIcon />
-        <span>Emir</span>
+        <span>E m i r</span>
         <ArrowForwardIosIcon />
       </a>
       <div className={styles.itemContainer}>

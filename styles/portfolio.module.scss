@@ -27,6 +27,11 @@
   }
 
   .techIUse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10%;
+
     animation-name: fadeIn;
     animation-duration: 2s;
 
@@ -36,12 +41,11 @@
 
     ul {
       padding-top: 10px;
+      padding-left: 0px;
 
       li {
         height: auto;
-        width: 90%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
 
         .tech {
@@ -57,14 +61,12 @@
   }
 }
 
-@media (max-width: variables.$tablet-view-small) {
+@media (max-width: variables.$tablet-view-medium) {
   .portfolio {
     font-size: 20px;
 
     .techIUse {
-      ul {
-        padding-left: 0;
-      }
+      margin-top: 0;
     }
   }
 }

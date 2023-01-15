@@ -1,263 +1,120 @@
 @use './_variables.module.scss';
 
-.robot {
+.container {
   width: 100vw;
+  flex: 0.5;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  flex: 0.5;
 
-  .antenna {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(to bottom right, #c79c9c, #aa7070);
-    border-radius: 50%;
-    border: 5px solid black;
-    animation: rotating 4s;
-    -webkit-animation: rotating 4s cubic-bezier(0.2, 1.48, 0.51, -0.25) infinite;
-
-    .whitePoint {
-      width: 30%;
-      height: 30%;
-      margin-top: 50%;
-      transform: translate(200%, 20%);
-      border-radius: 50%;
-      background-color: rgb(224, 221, 221);
-    }
-  }
-
-  @keyframes rotating {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .verticalLine {
-    width: 5px;
-    height: 10px;
-    background-color: black;
-  }
-
-  .headSquare {
-    width: 120px;
-    height: 120px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5%;
-
-    .faceSquare {
-      width: 90%;
-      height: 90%;
-      background-color: #e4bf94;
-
-      .faceContainer {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background: linear-gradient(to bottom right, #e4bf94, rgb(214, 170, 170));
-
-        .top {
-          flex: 0.5;
-          display: flex;
-          justify-content: space-around;
-
-          .eye {
-            margin-top: 20%;
-            position: relative;
-            display: inline-block;
-            border-radius: 50%;
-            width: 20%;
-            height: 40%;
-            background: white;
-
-            /*pupil*/
-            &:after {
-              position: absolute;
-              right: 30%;
-              width: 30%;
-              height: 30%;
-              background: #000;
-              border-radius: 50%;
-              content: ' ';
-            }
-          }
-        }
-
-        .bottom {
-          flex: 0.5;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          .mouth {
-            width: 60%;
-            height: 5%;
-            background-color: black;
-          }
-        }
-      }
-    }
-  }
-
-  .bodyRect {
-    width: 120px;
-    height: 200px;
-    background-color: black;
-    border-radius: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-x: visible;
-
-    .innerBodyRect {
-      width: 90%;
-      height: 95%;
-      background-color: #e4bf94;
-      overflow-x: visible;
-
-      .innerBodyContainer {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        background: linear-gradient(to bottom right, #e4bf94, rgb(214, 170, 170));
-        overflow-x: visible;
-
-        .leftArm {
-          width: 5%;
-          height: 50%;
-          background-color: black;
-          margin-top: 10%;
-          transform: rotate(30deg) translate(-200%, 40%);
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          overflow-x: visible;
-
-          .leftHand {
-            width: 20px;
-            height: 20px;
-            transform: rotate(30deg) translate(20%, 90%);
-            background-color: black;
-            border-radius: 30%;
-            display: flex;
-            justify-content: flex-end;
-            overflow-x: visible;
-
-            .leftHandSpace {
-              width: 15px;
-              height: 17px;
-              background: linear-gradient(to bottom, #23172d, #24182e);
-              border-radius: 50%;
-              transform: translate(10%, 31%);
-              overflow-x: visible;
-            }
-          }
-        }
-
-        .rightArm {
-          width: 5%;
-          height: 50%;
-          background-color: black;
-          margin-top: 10%;
-          transform: rotate(-30deg) translate(200%, 40%);
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          overflow-x: visible;
-
-          .rightHand {
-            width: 20px;
-            height: 20px;
-            transform: rotate(30deg) translate(30%, 100%);
-            background-color: black;
-            border-radius: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            overflow-x: visible;
-
-            .rightHandSpace {
-              width: 15px;
-              height: 17px;
-              background: linear-gradient(to bottom, #23172d, #24182e);
-              border-radius: 50%;
-              transform: translate(40%, 13%);
-              overflow-x: visible;
-            }
-          }
-        }
-      }
-    }
-  }
-  .legs {
-    width: 120px;
-    height: 150px;
-    display: flex;
-    justify-content: space-around;
-    overflow-x: visible;
-
-    .left {
-      background-color: black;
-      width: 10%;
-      height: 80%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow-x: visible;
-    }
-    .right {
-      background-color: black;
-      width: 10%;
-      height: 80%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow-x: visible;
-    }
-    .foot {
-      width: 50px;
-      height: 10px;
-      background-color: black;
-      overflow-x: visible;
-    }
-  }
-}
-
-@media (max-width: variables.$tablet-view-small) {
   .robot {
-    transform: translate(0, 3%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 
     .antenna {
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
       background: linear-gradient(to bottom right, #c79c9c, #aa7070);
       border-radius: 50%;
-      border: 3px solid black;
+      border: 5px solid black;
       animation: rotating 4s;
       -webkit-animation: rotating 4s cubic-bezier(0.2, 1.48, 0.51, -0.25) infinite;
+
+      .whitePoint {
+        width: 30%;
+        height: 30%;
+        margin-top: 50%;
+        transform: translate(200%, 20%);
+        border-radius: 50%;
+        background-color: rgb(224, 221, 221);
+      }
+    }
+
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .verticalLine {
+      width: 5px;
+      height: 10px;
+      background-color: black;
     }
 
     .headSquare {
-      width: 60px;
-      height: 60px;
+      width: 120px;
+      height: 120px;
       background-color: black;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 5%;
+
+      .faceSquare {
+        width: 90%;
+        height: 90%;
+        background-color: #e4bf94;
+
+        .faceContainer {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          background: linear-gradient(to bottom right, #e4bf94, rgb(214, 170, 170));
+
+          .top {
+            flex: 0.5;
+            display: flex;
+            justify-content: space-around;
+
+            .eye {
+              margin-top: 20%;
+              position: relative;
+              display: inline-block;
+              border-radius: 50%;
+              width: 20%;
+              height: 40%;
+              background: white;
+
+              /*pupil*/
+              &:after {
+                position: absolute;
+                right: 30%;
+                width: 30%;
+                height: 30%;
+                background: #000;
+                border-radius: 50%;
+                content: ' ';
+              }
+            }
+          }
+
+          .bottom {
+            flex: 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .mouth {
+              width: 60%;
+              height: 5%;
+              background-color: black;
+            }
+          }
+        }
+      }
     }
 
     .bodyRect {
-      width: 60px;
-      height: 100px;
+      width: 120px;
+      height: 200px;
       background-color: black;
       border-radius: 5%;
       display: flex;
@@ -266,37 +123,190 @@
       overflow-x: visible;
 
       .innerBodyRect {
+        width: 90%;
+        height: 95%;
+        background-color: #e4bf94;
+        overflow-x: visible;
+
         .innerBodyContainer {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          background: linear-gradient(to bottom right, #e4bf94, rgb(214, 170, 170));
+          overflow-x: visible;
+
           .leftArm {
+            width: 5%;
+            height: 50%;
+            background-color: black;
+            margin-top: 10%;
+            transform: rotate(30deg) translate(-200%, 40%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow-x: visible;
+
             .leftHand {
+              width: 20px;
+              height: 20px;
+              transform: rotate(30deg) translate(20%, 90%);
+              background-color: black;
+              border-radius: 30%;
+              display: flex;
+              justify-content: flex-end;
+              overflow-x: visible;
+
               .leftHandSpace {
-                background: linear-gradient(to bottom, #2b2228, #2b2227);
+                width: 15px;
+                height: 17px;
+                background: linear-gradient(to bottom, #23172d, #24182e);
+                border-radius: 50%;
+                transform: translate(10%, 31%);
+                overflow-x: visible;
               }
             }
           }
+
           .rightArm {
+            width: 5%;
+            height: 50%;
+            background-color: black;
+            margin-top: 10%;
+            transform: rotate(-30deg) translate(200%, 40%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow-x: visible;
+
             .rightHand {
+              width: 20px;
+              height: 20px;
+              transform: rotate(30deg) translate(30%, 100%);
+              background-color: black;
+              border-radius: 30%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              overflow-x: visible;
+
               .rightHandSpace {
-                background: linear-gradient(to bottom, #2a2128, #2b2128);
+                width: 15px;
+                height: 17px;
+                background: linear-gradient(to bottom, #23172d, #24182e);
+                border-radius: 50%;
+                transform: translate(40%, 13%);
+                overflow-x: visible;
               }
             }
           }
         }
       }
     }
-
     .legs {
-      width: 50px;
-      height: 80px;
+      width: 120px;
+      height: 150px;
       display: flex;
       justify-content: space-around;
       overflow-x: visible;
 
+      .left {
+        background-color: black;
+        width: 10%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow-x: visible;
+      }
+      .right {
+        background-color: black;
+        width: 10%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow-x: visible;
+      }
       .foot {
-        width: 15px;
+        width: 50px;
         height: 10px;
         background-color: black;
         overflow-x: visible;
+      }
+    }
+  }
+}
+
+@media (max-width: variables.$tablet-view-medium) {
+  .container {
+    .robot {
+      transform: translate(0, 3%);
+      height: 90%;
+
+      .antenna {
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(to bottom right, #c79c9c, #aa7070);
+        border-radius: 50%;
+        border: 3px solid black;
+        animation: rotating 4s;
+        -webkit-animation: rotating 4s cubic-bezier(0.2, 1.48, 0.51, -0.25) infinite;
+      }
+
+      .headSquare {
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5%;
+      }
+
+      .bodyRect {
+        width: 60px;
+        height: 100px;
+        background-color: black;
+        border-radius: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: visible;
+
+        .innerBodyRect {
+          .innerBodyContainer {
+            .leftArm {
+              .leftHand {
+                .leftHandSpace {
+                  background: linear-gradient(to bottom, #2b2228, #2b2227);
+                }
+              }
+            }
+            .rightArm {
+              .rightHand {
+                .rightHandSpace {
+                  background: linear-gradient(to bottom, #2a2128, #2b2128);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .legs {
+        width: 50px;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        overflow-x: visible;
+
+        .foot {
+          width: 15px;
+          height: 10px;
+          background-color: black;
+          overflow-x: visible;
+        }
       }
     }
   }

@@ -23,12 +23,15 @@
     }
   }
 
-  @media (max-height: 667px) {
+  /* iPhone SE */
+  @media (max-height: 667px) and (max-width: 375px) {
     .sections {
       height: 567px;
     }
   }
-  @media (max-height: 896px) {
+
+  /* iPhone XR */
+  @media (max-height: 896px) and (max-width: 414px) {
     .sections {
       height: 624px;
     }
