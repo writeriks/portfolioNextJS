@@ -2,8 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+
+  height: 100vh;
+  position: fixed;
 }
 
 a {
@@ -18,8 +21,7 @@ a {
   margin: 0;
 }
 
- @font-face {
-  font-family: "RetGanon";
-  src: local("RetGanon"),
-   url("../fonts/retganon/retganon.ttf") format("truetype");
-  }
+@font-face {
+  font-family: 'RetGanon';
+  src: local('RetGanon'), url('../fonts/retganon/retganon.ttf') format('truetype');
+}

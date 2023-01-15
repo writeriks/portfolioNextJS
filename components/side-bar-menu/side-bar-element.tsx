@@ -10,7 +10,7 @@ interface SideBarElementProp {
 const SideBarElement = ({ sideBarComponent }: SideBarElementProp) => {
   const isBlog = sideBarComponent === SideBarMenuType.Blog
   const target = isBlog ? '_blank' : '_self'
-  const hrefLink = isBlog ? 'https://google.com' : `#${sideBarComponent.toLowerCase()}`
+  const hrefLink = isBlog ? 'https://myadventureofprogramming.com' : `#${sideBarComponent.toLowerCase()}`
   return (
     <li onClick={() => navBarHelper.handleToggleHamburgerMenu()}>
       <a href={hrefLink} target={target} rel="noreferrer">

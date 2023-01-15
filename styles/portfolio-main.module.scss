@@ -22,4 +22,15 @@
       overflow: hidden;
     }
   }
+
+  @media (max-height: 667px) {
+    .sections {
+      height: 567px;
+    }
+  }
+  @media (max-height: 896px) {
+    .sections {
+      height: 624px;
+    }
+  }
 }

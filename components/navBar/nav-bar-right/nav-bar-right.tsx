@@ -12,7 +12,13 @@ const NavBarRight = () => {
 
   return (
     <div className={styles.right}>
-      {isMobile ? <HamburgerMenuIcon /> : <span className={styles.blogTitle}>Blog</span>}
+      {isMobile ? (
+        <HamburgerMenuIcon />
+      ) : (
+        <a className={styles.blogTitle} href="https://myadventureofprogramming.com" target="_blank" rel="noreferrer">
+          Blog
+        </a>
+      )}
     </div>
   )
 }
