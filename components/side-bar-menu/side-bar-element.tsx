@@ -3,16 +3,19 @@ import navBarHelper from '../navBar/nav-bar-helper'
 
 import { SideBarMenuType } from './side-bar-menu-constants'
 
-import styles from '../../styles/side-bar-element.module.scss'
-
 interface SideBarElementProp {
   sideBarComponent: SideBarMenuType
 }
 
 const SideBarElement = ({ sideBarComponent }: SideBarElementProp) => {
+  const isBlog = sideBarComponent === SideBarMenuType.Blog
+  const target = isBlog ? '_blank' : '_self'
+  const hrefLink = isBlog ? 'https://google.com' : `#${sideBarComponent.toLowerCase()}`
   return (
     <li onClick={() => navBarHelper.handleToggleHamburgerMenu()}>
-      <a href={`#${sideBarComponent.toLowerCase()}`}>{sideBarComponent}</a>
+      <a href={hrefLink} target={target} rel="noreferrer">
+        {sideBarComponent}
+      </a>
     </li>
   )
 }

@@ -10,7 +10,11 @@ import styles from '../../../styles/nav-bar.module.scss'
 const NavBarRight = () => {
   const isMobile = useSelector(contextReducerSelector.getIsMobile)
 
-  return <div className={styles.right}>{isMobile && <HamburgerMenuIcon />}</div>
+  return (
+    <div className={styles.right}>
+      {isMobile ? <HamburgerMenuIcon /> : <span className={styles.blogTitle}>Blog</span>}
+    </div>
+  )
 }
 
 export default NavBarRight

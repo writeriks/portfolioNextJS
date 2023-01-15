@@ -72,6 +72,18 @@
     }
 
     .right {
+      .blogTitle {
+        font-size: 40px;
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          color: #00ffcf;
+          cursor: pointer;
+        }
+      }
+
       .hamburgerMenu {
         width: 32px;
         height: 25px;
