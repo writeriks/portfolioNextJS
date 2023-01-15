@@ -15,8 +15,8 @@
 }
 
 .bubble {
-  width: 80vw;
-  height: 85vh;
+  width: 45vw;
+  height: 65vh;
   overflow: hidden;
   background-color: wheat;
   display: flex;
@@ -35,7 +35,7 @@
 @media (max-width: variables.$tablet-view-medium) {
   .bubble {
     width: 80vw;
-    height: 60vh;
+    height: 40vh;
 
     .inner {
       padding: 5px;
