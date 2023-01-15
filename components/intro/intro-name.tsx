@@ -6,7 +6,7 @@ const IntroName = () => {
     <div className={styles.introName}>
       <span>Hi, My name is</span>
       <span>Emir Haktan Ozturk</span>
-      <span>I am a Software Engineer</span>
+      <span>I am a Frontend Developer</span>
     </div>
   )
 }
