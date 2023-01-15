@@ -25,6 +25,11 @@ const NavBarLeft = () => {
           <LinkedInIcon className={styles.navigationBarLeftIcon} />
         </a>
       </div>
+      <div className={styles.itemContainer}>
+        <a href="https://medium.com/@emirhaktanztrk" target="_blank" rel="noreferrer">
+          <span className={styles.navigationBarLeftIcon}>Medium</span>
+        </a>
+      </div>
     </div>
   )
 }
