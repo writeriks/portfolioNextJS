@@ -13,12 +13,8 @@ const Robot = () => {
         <div className={styles.faceSquare}>
           <div className={styles.faceContainer}>
             <div className={styles.top}>
-              <span>
-                <span></span>
-              </span>
-              <span>
-                <span></span>
-              </span>
+              <span id="eye" className={styles.eye} />
+              <span id="eye" className={styles.eye} />
             </div>
             <div className={styles.bottom}>
               <div className={styles.mouth}></div>
