@@ -16,10 +16,10 @@ interface PortfolioProps {
 
 const Portfolio: React.FC<PortfolioProps> = ({ portfolioRef }) => {
   const viewportComponent = useSelector(uiReducerSelector.getViewportComponent)
-  const isViewport = viewportComponent === ViewportComponents.PORTFOLIO
+  const isViewport = viewportComponent === ViewportComponents.ABOUT
 
   return (
-    <div className={styles.portfolio} id="portfolio" ref={portfolioRef}>
+    <div className={styles.portfolio} id="about" ref={portfolioRef}>
       <Bubble>{isViewport && <PortfolioStory />}</Bubble>
     </div>
   )

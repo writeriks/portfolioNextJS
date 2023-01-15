@@ -6,7 +6,7 @@ export enum Modal {
 
 export enum ViewportComponents {
   INTRO = 'INTRO',
-  PORTFOLIO = 'PORTFOLIO',
+  ABOUT = 'ABOUT',
   TESTIMONIALS = 'TESTIMONIALS',
   WORKS = 'WORKS',
   CONTACT = 'CONTACT',
@@ -58,6 +58,13 @@ const uiSlice = createSlice({
   },
 })
 
-export const { setIsLoading, openLoginModal, closeModal, setIsTechListShown, setViewportComponent, toggleHamburgerMenu } = uiSlice.actions
+export const {
+  setIsLoading,
+  openLoginModal,
+  closeModal,
+  setIsTechListShown,
+  setViewportComponent,
+  toggleHamburgerMenu,
+} = uiSlice.actions
 
 export default uiSlice.reducer
