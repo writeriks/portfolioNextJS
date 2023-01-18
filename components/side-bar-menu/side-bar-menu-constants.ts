@@ -7,4 +7,9 @@ export enum SideBarMenuType {
   Contact = 'Contact',
 }
 
-export const sideBarMenuConstants = [SideBarMenuType.Intro, SideBarMenuType.About, SideBarMenuType.Blog]
+export const sideBarMenuConstants = [
+  SideBarMenuType.Intro,
+  SideBarMenuType.About,
+  SideBarMenuType.Blog,
+  SideBarMenuType.Contact,
+]

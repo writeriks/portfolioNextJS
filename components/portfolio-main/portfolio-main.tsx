@@ -9,13 +9,15 @@ import useSetViewportComponent from '../../hooks/use-set-viewport-component'
 
 import styles from '../../styles/portfolio-main.module.scss'
 import SideBarMenu from '../side-bar-menu/side-bar-menu'
+import Contact from '../contact/contact'
 
 const NAV_BAR_HEIGHT = '-101px'
 const PortfolioMain: NextComponentType = () => {
   const introRef = useRef<MutableRefObject<HTMLDivElement>>()
   const portfolioRef = useRef<MutableRefObject<HTMLDivElement>>()
+  const contactRef = useRef<MutableRefObject<HTMLDivElement>>()
 
-  useSetViewportComponent([introRef, portfolioRef], NAV_BAR_HEIGHT)
+  useSetViewportComponent([introRef, portfolioRef, contactRef], NAV_BAR_HEIGHT)
 
   return (
     <div className={styles.container}>
@@ -24,7 +26,7 @@ const PortfolioMain: NextComponentType = () => {
       <div className={styles.sections}>
         <Intro introRef={introRef} />
         <Portfolio portfolioRef={portfolioRef} />
-
+        <Contact contactRef={contactRef} />
         {/*   <Works />
         <Testimonials />
         <Contact /> */}
