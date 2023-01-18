@@ -1,3 +1,107 @@
+@use './_variables.module.scss';
+
 .contact {
   background: linear-gradient(to bottom, #172b26, #1e1f16);
+  display: flex;
+  justify-content: center;
+
+  @mixin step1($width, $color) {
+    box-shadow: $width 0 $color, -$width 0 $color, 0 (-$width) $color, 0 $width $color;
+    margin: $width auto;
+  }
+
+  @mixin step2v2($width, $color, $bgcolor) {
+    box-shadow: $width 0 $bgcolor, -$width 0 $bgcolor, 0 (-$width) $bgcolor, 0 $width $bgcolor, 2 * $width 0 $color,
+      -2 * $width 0 $color, 0 (-2 * $width) $color, 0 2 * $width $color, 0 0 0 $width $color;
+    margin: 2 * $width auto;
+  }
+
+  @mixin inputGrid {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+
+  .contactForm {
+    margin-top: 5%;
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    @include step1(6px, black);
+
+    .inputContainer {
+      @include inputGrid();
+      height: 75px;
+
+      a {
+        align-self: center;
+        color: white;
+      }
+
+      input {
+        font-size: 40px;
+        background-color: transparent;
+        color: white;
+        padding-left: 5px;
+      }
+    }
+
+    .messageContainer {
+      @include inputGrid();
+      height: 100%;
+
+      a {
+        color: white;
+      }
+
+      textarea {
+        font-size: 40px;
+        background-color: transparent;
+        height: 100%;
+        color: white;
+        resize: none;
+        padding: 5px;
+      }
+    }
+
+    button {
+      height: 80px;
+      align-self: flex-end;
+      width: 50%;
+      font-size: 40px;
+      background-color: transparent;
+      color: white;
+
+      @include step1(2px, white);
+    }
+  }
+
+  @media (max-width: variables.$tablet-view-medium) {
+    .contactForm {
+      .inputContainer,
+      .messageContainer {
+        grid-template-columns: 30% 70%;
+        font-size: 25px;
+        margin-bottom: 10px;
+
+        textarea,
+        input {
+          font-size: 25px;
+        }
+      }
+
+      .inputContainer {
+        height: 50px;
+      }
+
+      button {
+        width: 35%;
+        font-size: 25px;
+      }
+    }
+  }
 }

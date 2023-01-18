@@ -4,12 +4,12 @@ import { MutableRefObject, useRef } from 'react'
 import NavBar from '../navBar/nav-bar'
 import Portfolio from '../portfolio/portfolio'
 import Intro from '../intro/intro'
+import Contact from '../contact/contact'
+import SideBarMenu from '../side-bar-menu/side-bar-menu'
 
 import useSetViewportComponent from '../../hooks/use-set-viewport-component'
 
 import styles from '../../styles/portfolio-main.module.scss'
-import SideBarMenu from '../side-bar-menu/side-bar-menu'
-import Contact from '../contact/contact'
 
 const NAV_BAR_HEIGHT = '-101px'
 const PortfolioMain: NextComponentType = () => {
