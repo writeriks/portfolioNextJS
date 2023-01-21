@@ -4,20 +4,18 @@ interface ContactFormTextAreaProps extends React.TextareaHTMLAttributes<HTMLText
   containerClass: string
   textAreaClass: string
   textAreaLabel: string
-  onChange: (target: React.ChangeEvent<HTMLTextAreaElement>) => void
 }
 
 const ContactFormTextArea: React.FC<ContactFormTextAreaProps> = ({
   containerClass,
   textAreaClass,
   textAreaLabel,
-  onChange,
   ...props
 }) => {
   return (
     <span className={containerClass}>
       <a>{textAreaLabel}: </a>
-      <textarea className={textAreaClass} onChange={onChange} {...props} />
+      <textarea className={textAreaClass} {...props} />
     </span>
   )
 }

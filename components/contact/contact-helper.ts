@@ -1,4 +1,6 @@
 import emailjs from '@emailjs/browser'
+import { setIsMailSent } from '../../store/reducers/context-reducer/context-slice'
+import store from '../../store/redux-store'
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID
@@ -10,14 +12,19 @@ class ContactHelper {
     try {
       const result = await emailjs.sendForm(
         //@ts-expect-error environment variables gives error
-        SERVICE_ID, // Service ID
-        TEMPLATE_ID, // Template ID
+        SERVICE_ID,
+        TEMPLATE_ID,
         currentFormRef,
-        PUBLIC_KEY // Public Key
+        PUBLIC_KEY
       )
-      console.log('result.text', result.text)
+
+      if (result.text === 'OK') {
+        store.dispatch(setIsMailSent(true))
+      } else {
+        store.dispatch(setIsMailSent(false))
+      }
     } catch (error: any) {
-      console.log('error', error)
+      store.dispatch(setIsMailSent(false))
     }
   }
 }

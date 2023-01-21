@@ -1,23 +1,18 @@
-import React, { useState, useCallback, useRef } from 'react'
+import React, { useRef } from 'react'
+import { useSelector } from 'react-redux'
 
-import { ContactFormProps, defaultContactForm } from './contact-types'
-
-import styles from '../../styles/contact.module.scss'
 import ContactFormInput from './contact-form-input'
 import ContactFormTextArea from './contact-form-text-area'
+
+import contextReducerSelector from '../../store/reducers/context-reducer/constext-reducer-selector'
 import contactHelper from './contact-helper'
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState<ContactFormProps>(defaultContactForm)
-  const formRef = useRef<HTMLFormElement>(null)
+import styles from '../../styles/contact.module.scss'
+import MailResultMessage from './mail-result-message'
 
-  const onChange = useCallback(
-    ({ target }: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
-      const formValue = { [target.name]: target.value }
-      setFormData((prevFormData) => ({ ...prevFormData, ...formValue }))
-    },
-    []
-  )
+const ContactForm = () => {
+  const formRef = useRef<HTMLFormElement>(null)
+  const isMailSent = useSelector(contextReducerSelector.getIsMailSent)
 
   return (
     <form
@@ -33,8 +28,6 @@ const ContactForm = () => {
         inputLabel="email"
         name="email"
         required
-        //value={formData.email}
-        //onChange={onChange}
       />
 
       <ContactFormInput
@@ -44,8 +37,6 @@ const ContactForm = () => {
         inputLabel="subject"
         name="subject"
         required
-        //value={formData.subject}
-        //onChange={onChange}
       />
 
       <ContactFormTextArea
@@ -54,12 +45,13 @@ const ContactForm = () => {
         placeholder="Please type your Message"
         textAreaLabel="message"
         name="message"
-        value={formData.message}
         required
-        onChange={onChange}
       />
 
-      <button className={styles.submitButton}> Send </button>
+      <span className={styles.formBottomContainer}>
+        {isMailSent != null ? <MailResultMessage isMailSent={isMailSent} /> : <a></a>}
+        <button className={styles.submitButton}> Send </button>
+      </span>
     </form>
   )
 }

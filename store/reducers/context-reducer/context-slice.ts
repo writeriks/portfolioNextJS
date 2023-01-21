@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 export interface ContextState {
   isMobile: boolean
   searchText: string
+  isMailSent: boolean | null
 }
 
 export enum selectedCategory {
@@ -14,6 +15,7 @@ export enum selectedCategory {
 export const initialState: ContextState = {
   searchText: '',
   isMobile: false,
+  isMailSent: null,
 }
 
 const contextSlice = createSlice({
@@ -26,9 +28,12 @@ const contextSlice = createSlice({
     setSearchText: (state, action: PayloadAction<string>) => {
       state.searchText = action.payload
     },
+    setIsMailSent: (state, action: PayloadAction<boolean>) => {
+      state.isMailSent = action.payload
+    },
   },
 })
 
-export const { setIsMobile, setSearchText } = contextSlice.actions
+export const { setIsMobile, setSearchText, setIsMailSent } = contextSlice.actions
 
 export default contextSlice.reducer

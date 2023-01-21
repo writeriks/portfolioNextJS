@@ -8,6 +8,8 @@ class ContextReducerSelector {
   getIsMobile = createSelector(this.getContextReducer, (context) => context.isMobile)
 
   getSearchText = createSelector(this.getContextReducer, (context) => context.searchText)
+
+  getIsMailSent = createSelector(this.getContextReducer, (context) => context.isMailSent)
 }
 
 const contextReducerSelector = new ContextReducerSelector()

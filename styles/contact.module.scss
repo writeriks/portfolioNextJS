@@ -61,15 +61,33 @@
       }
     }
 
-    button {
+    .formBottomContainer {
+      display: grid;
+      grid-template-columns: 25% 75%;
       height: 80px;
-      align-self: flex-end;
-      width: 50%;
       font-size: 40px;
-      background-color: transparent;
-      color: white;
+      width: 100%;
 
-      @include step1(2px, white);
+      a {
+        font-size: 40px;
+      }
+
+      .mailSuccess {
+        color: #00ff6a;
+      }
+
+      .mailFailed {
+        color: #ff1100ed;
+      }
+
+      button {
+        align-self: flex-end;
+        width: 70%;
+        font-size: 40px;
+        background-color: transparent;
+        color: white;
+        border-color: white;
+      }
     }
   }
 
@@ -91,9 +109,17 @@
         height: 50px;
       }
 
-      button {
-        width: 35%;
-        font-size: 25px;
+      .formBottomContainer {
+        grid-template-columns: 30% 70%;
+        height: 50px;
+
+        a {
+          font-size: 25px;
+        }
+
+        button {
+          font-size: 25px;
+        }
       }
     }
   }
