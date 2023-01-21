@@ -9,6 +9,7 @@ class ContactHelper {
     e.preventDefault()
     try {
       const result = await emailjs.sendForm(
+        //@ts-expect-error environment variables gives error
         SERVICE_ID, // Service ID
         TEMPLATE_ID, // Template ID
         currentFormRef,
