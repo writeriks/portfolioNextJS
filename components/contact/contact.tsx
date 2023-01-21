@@ -1,7 +1,8 @@
 import { MutableRefObject } from 'react'
 
-import styles from '../../styles/contact.module.scss'
 import ContactForm from './contact-form'
+
+import styles from '../../styles/contact.module.scss'
 
 interface ContactProps {
   contactRef: MutableRefObject<any>
