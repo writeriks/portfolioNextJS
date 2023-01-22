@@ -3,7 +3,8 @@
 .contact {
   background: linear-gradient(to bottom, #172b26, #1e1f16);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   @mixin step1($width, $color) {
     box-shadow: $width 0 $color, -$width 0 $color, 0 (-$width) $color, 0 $width $color;
@@ -16,8 +17,15 @@
     font-size: 40px;
   }
 
+  .contactTitle {
+    span {
+      font-size: 40px;
+      color: white;
+    }
+  }
+
   .contactForm {
-    margin-top: 5%;
+    margin-top: 5px;
     height: 80%;
     width: 90%;
     display: flex;
@@ -91,8 +99,33 @@
     }
   }
 
-  @media (max-width: variables.$tablet-view-medium) {
+  .contactLinks {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    color: white;
+    align-items: center;
+    height: 10%;
+
+    .linkContainer {
+      .linkItem {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: variables.$tablet-view-medium) {
+  .contact {
+    .contactTitle {
+      span {
+        font-size: 25px;
+      }
+    }
+
     .contactForm {
+      padding: 10px;
+
       .inputContainer,
       .messageContainer {
         grid-template-columns: 30% 70%;

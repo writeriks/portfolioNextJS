@@ -44,15 +44,19 @@
         }
       }
 
-      .itemContainer {
-        margin-left: 30px;
+      .iconMaincontainer {
+        display: flex;
 
-        .navigationBarLeftIcon {
-          display: flex;
-          font-size: 22px;
-          text-decoration: none;
-          color: white;
-          transition: all 1s ease;
+        .itemContainer {
+          margin-left: 30px;
+
+          .navigationBarLeftIcon {
+            display: flex;
+            font-size: 22px;
+            text-decoration: none;
+            color: white;
+            transition: all 1s ease;
+          }
         }
       }
 

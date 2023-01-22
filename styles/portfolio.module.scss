@@ -24,6 +24,12 @@
     margin-bottom: 30px;
     display: flex;
     font-weight: 500;
+
+    span {
+      p {
+        text-align: justify;
+      }
+    }
   }
 
   .techIUse {

@@ -2,8 +2,7 @@ import React from 'react'
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import ContactItems from '../../contact-items/contact-items'
 
 import styles from '../../../styles/nav-bar.module.scss'
 
@@ -15,21 +14,11 @@ const NavBarLeft = () => {
         <span>E m i r</span>
         <ArrowForwardIosIcon />
       </a>
-      <div className={styles.itemContainer}>
-        <a href="https://github.com/writeriks" target="_blank" rel="noreferrer">
-          <GitHubIcon className={styles.navigationBarLeftIcon} />
-        </a>
-      </div>
-      <div className={styles.itemContainer}>
-        <a href="https://www.linkedin.com/in/emir-haktan-%C3%B6zt%C3%BCrk-b80685a6/" target="_blank" rel="noreferrer">
-          <LinkedInIcon className={styles.navigationBarLeftIcon} />
-        </a>
-      </div>
-      <div className={styles.itemContainer}>
-        <a href="https://medium.com/@emirhaktanztrk" target="_blank" rel="noreferrer">
-          <span className={styles.navigationBarLeftIcon}>Medium</span>
-        </a>
-      </div>
+      <ContactItems
+        mainContainerClass={styles.iconMaincontainer}
+        itemContainerClass={styles.itemContainer}
+        iconContainerClass={styles.navigationBarLeftIcon}
+      />
     </div>
   )
 }

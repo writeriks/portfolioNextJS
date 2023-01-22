@@ -8,7 +8,7 @@ const TechList = () => {
       <a>Technologies:</a>
       <ul>
         <li>
-          <span className={styles.tech}>Javascript</span>
+          <span className={styles.tech}>J a v a s c r i p t </span>
         </li>
         <li>
           <span className={styles.tech}>R e a c t</span>
