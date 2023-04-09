@@ -6,7 +6,7 @@ import { SideBarMenuType } from './side-bar-menu-constants'
 interface SideBarElementProp {
   sideBarComponent: SideBarMenuType
 }
-
+// test
 const SideBarElement = ({ sideBarComponent }: SideBarElementProp) => {
   const isBlog = sideBarComponent === SideBarMenuType.Blog
   const target = isBlog ? '_blank' : '_self'
