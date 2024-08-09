@@ -29,7 +29,7 @@ const ContactItems: React.FC<ContactItemsProps> = ({ mainContainerClass, itemCon
       </div>
       <div className={itemContainerClass}>
         <a
-          href="https://docs.google.com/document/d/1bIaGoubsxy8f6Gwe7gglWNzbuAojMmSsuCUmVbmHpFw/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1zaQvHEcZgZvIWP2zHI4Xb7G43f2RXoaz/edit?usp=sharing&ouid=109759679203853523584&rtpof=true&sd=true"
           target="_blank"
           rel="noreferrer"
         >
